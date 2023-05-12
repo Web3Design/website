@@ -2,12 +2,14 @@ import 'server-only';
 import type { Locale } from './config';
 import enJson from '@/i18n/locales/en.json' assert { type: 'json' };
 import zhCNJson from '@/i18n/locales/zh-CN.json' assert { type: 'json' };
+import zhTWJson from '@/i18n/locales/zh-TW.json' assert { type: 'json' };
 
 // We enumerate all dictionaries here for better linting and typescript support
 // We also get the default import for cleaner types
 const dictionaries = {
   en: () => enJson,
-  'zh-CN': () => zhCNJson
+  'zh-CN': () => zhCNJson,
+  'zh-TW': () => zhTWJson
   // https://github.com/vercel/next.js/issues/47595
   // en: () =>
   // import('@/i18n/locales/en.json', { assert: { type: 'json' } }).then(

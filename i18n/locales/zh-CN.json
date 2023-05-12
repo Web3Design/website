@@ -1,4 +1,53 @@
 {
   "title": "你好，世界",
-  "author": "vadxq"
+  "author": "vadxq",
+  "home": {
+    "navbar": {
+      "project": "项目",
+      "contact": "联系",
+      "aboutUs": "关于我们",
+      "language": "语言"
+    },
+    "header": {
+      "web3": "web3.0",
+      "design": "设计",
+      "kit": "素材",
+      "web3DesignKit": "WEB3.0 设计素材"
+    },
+    "purpose": "为 web.3 Builder 提供设计库",
+    "features": {
+      "openSource": "开源",
+      "design": "设计",
+      "creative": "创意",
+      "entrance": "入口"
+    },
+    "ethereumOpenSource": "以太坊开源",
+    "centeredDesign": "以设计为中心的项目",
+    "category": {
+      "basicSpecification": "基本规格",
+      "library": "库",
+      "productTool": "生产工具",
+      "posterPromotion": "海报宣传",
+      "materialDesign": "材料设计"
+    },
+    "hacker": {
+      "hacker": "黑客",
+      "pine": "松"
+    },
+    "more": "更多",
+    "copyright": "版权©️",
+    "campus": {
+      "campus": "校园",
+      "ambassador": "大使"
+    },
+    "contract": {
+      "youCan": "你可以",
+      "findUs": "发现我们",
+      "here": "在这",
+      "deboxGroup": "DeBox群",
+      "twitter": "推特",
+      "github": "Github",
+      "figma": "Figma"
+    }
+  }
 }

@@ -1,37 +1,46 @@
-import LayoutLink from '@/components/layout/link';
-import prisma from '@/prisma';
 import { getDictionary } from '@/i18n/getDictionary';
 import { Locale } from '@/i18n/config';
-import { Button } from '@/components/button';
-
-// revalidate this page every 10 seconds, but don't useful for this app dir, so please use pages/api for restful api and fetch on here. example see [id]/page.tsx
-export const revalidate = 10;
-
-async function getData() {
-  const feed = await prisma.post.findMany({
-    where: { published: true }
-  });
-  return feed;
-}
+import { Typography } from '@/components/typography';
+import Contract from '@/views/home/contract';
+import Copyright from '@/views/home/copyright';
+import Campus from '@/views/home/campus';
+import Hacker from '@/views/home/hacker';
+import CategoryList from '@/views/home/categoryList';
+import Header from '@/views/home/header';
+import Features from '@/views/home/features';
 
 export default async function Home({
   params: { lang }
 }: {
   params: { lang: Locale };
 }) {
-  const data = await getData();
   const dictionary = await getDictionary(lang);
+  console.log(dictionary);
 
   return (
-    <div>
-      <main>
-        <LayoutLink href={'/' + new Date().toISOString()}>button</LayoutLink>
-        <div>{JSON.stringify(data)}</div>
-        <div>{dictionary.title}</div>
-        <div>by {dictionary.author}</div>
-        <Button className="mx-3 w-[120px]">Button</Button>
-      </main>
-      <footer>footer</footer>
-    </div>
+    <main className="bg-[#63CA2E]">
+      <div className="px-[32px] py-[42px] md:px-[38px] md:py-[48px] lg:px-[58px] lg:py-[64px] xl:px-[53px] xl:py-[78px]">
+        <Header dictionary={dictionary} />
+        <div className="mx-[48px] mt-[169px] flex items-center justify-center rounded-[20px] bg-white px-[16px] py-[24px] md:mx-[78px] md:mt-[109px] md:h-[160px] md:p-0 lg:mx-[108px] lg:mt-[169px] lg:h-[201px]">
+          <Typography variant="h3" className="text-center text-[#63CA2E]">
+            {dictionary.home.purpose}
+          </Typography>
+        </div>
+        <Features dictionary={dictionary} />
+        <div className="mt-[120px] flex flex-col items-center">
+          <Typography className="text-center text-white" variant="h3">
+            {dictionary.home.ethereumOpenSource}
+          </Typography>
+          <Typography className="text-center text-white" variant="h3">
+            {dictionary.home.centeredDesign}
+          </Typography>
+        </div>
+        <CategoryList dictionary={dictionary} />
+        <Hacker dictionary={dictionary} />
+        <Campus dictionary={dictionary} />
+        <Copyright dictionary={dictionary} />
+        <Contract dictionary={dictionary} />
+      </div>
+    </main>
   );
 }

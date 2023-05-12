@@ -2,6 +2,8 @@
 @import './tailwind.css';
 @import 'nprogress/nprogress.css';
 
+@import url('https://fonts.google.com/specimen/Inter?query=Inter');
+
 /* 自定义全局 CssVar */
 :root {
   --pure-transition-duration: 0.016s;
@@ -17,8 +19,23 @@
   filter: invert(80%);
 }
 
-/* 重置 vxe-table 样式 */
-.vxe-button.type--button.theme--primary:hover,
-.vxe-pager .vxe-pager--num-btn:not(.is--disabled).is--active {
-  color: #fff !important;
+.line-clamp-multi {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+
+html,
+body {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  max-width: 100vw;
+  overflow-x: hidden;
 }

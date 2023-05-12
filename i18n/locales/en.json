@@ -1,4 +1,53 @@
 {
   "title": "hello world",
-  "author": "vadxq"
+  "author": "vadxq",
+  "home": {
+    "navbar": {
+      "project": "project",
+      "contact": "contact",
+      "aboutUs": "about us",
+      "language": "language"
+    },
+    "header": {
+      "web3": "web3.0",
+      "design": "design",
+      "kit": "kit",
+      "web3DesignKit": "WEB3.0 DESIGN KIT"
+    },
+    "purpose": "Provide a design repository for web.3 Builder",
+    "features": {
+      "openSource": "Open Source",
+      "design": "Design",
+      "creative": "Creative",
+      "entrance": "Entrance"
+    },
+    "ethereumOpenSource": "An Ethereum open-source",
+    "centeredDesign": "project centered on design",
+    "category": {
+      "basicSpecification": "Basic specification",
+      "library": "library",
+      "productTool": "Product tool",
+      "posterPromotion": "Poster Promotion",
+      "materialDesign": "Material Design"
+    },
+    "hacker": {
+      "hacker": "hacker",
+      "pine": "pine"
+    },
+    "more": "more",
+    "copyright": "Copyright©️",
+    "campus": {
+      "campus": "campus",
+      "ambassador": "ambassador"
+    },
+    "contract": {
+      "youCan": "YOU CAN",
+      "findUs": "FIND US",
+      "here": "HERE",
+      "deboxGroup": "DeBox Group",
+      "twitter": "Twitter",
+      "github": "Github",
+      "figma": "Figma"
+    }
+  }
 }

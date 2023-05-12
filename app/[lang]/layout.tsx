@@ -2,7 +2,7 @@ import '@/styles/index.css';
 import RootLayoutClient from '@/components/layout';
 import { Flexible } from '@/components/theme/flexible';
 import { Toaster } from '@/components/toast/toast';
-import Navbar from '@/components/navbar';
+// import Navbar from '@/components/navbar';
 import { Metadata } from 'next';
 import { DefaultMetadata } from '@/components/theme/metadata';
 import { i18n } from '@/i18n/config';
@@ -37,7 +37,7 @@ export default function RootLayout({
         <Flexible />
         <Toaster />
         <RootLayoutClient>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
         </RootLayoutClient>
       </body>
